@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foto Saya</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      font-family: sans-serif;
+    }
+
+    img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    }
+
+    /* Tombol tetap di pojok layar */
+    .btn-download {
+      position: fixed; /* Menempel pada layar, bukan pada elemen lain */
+      top: 20px;
+      right: 20px;
+      text-decoration: none;
+      color: white;
+      background: #444; /* Warna netral agar tidak terlalu mencolok */
+      padding: 12px 24px;
+      border-radius: 50px; /* Membuat tombol lonjong/rounded */
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
+      z-index: 999; /* Memastikan tombol selalu di paling depan */
+    }
+
+    .btn-download:hover {
+      background: #eee;
+      color: #111;
+      transform: translateY(2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tombol Download di Pojok Layar -->
+  <a href="Foto.jpg" download="Foto_Saya.jpg" class="btn-download">
+    Download File
+  </a>
+  
+  <!-- Gambar di Tengah -->
+  <img src="Foto.jpg" alt="Foto">
+
+</body>
+</html>
+
